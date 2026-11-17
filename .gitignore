@@ -1,0 +1,15 @@
+#Dependencies - Take much space
+node_modules/
+
+#Enviroment variables - May contain passwords,API keys, database credentials
+.env
+
+#Build files
+dist/
+build/
+
+#Logs
+*.log
+
+#System files
+.DS_Store
