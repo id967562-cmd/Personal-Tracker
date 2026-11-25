@@ -5,7 +5,6 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-
 //This middleware parse incomming JSON request bodies and make the parse data
 // available through req.body
 app.use(express.json());// Security checkpoint
@@ -20,15 +19,20 @@ const logger = (req, res, next) => {
 //logger register custom middleware
 app.use(logger);
 
-app.post("/login", (req, res) => {
-    console.log(req.body);
-    res.send("Login request received");
-});
 
+//Routes
 const heathRoutes = require("./Routes/healthRoutes");
+const taskRoutes = require("./Routes/taskRoutes");
 
+app.use("/api",taskRoutes);
 app.use("/api", heathRoutes);
 
+app.post("/login",(req,res)=>{
+    console.log(req.body);
+    res.send("Login request received");
+})
+
+//Start Server
 async function startServer() {
     await connectDB(); // calling the database connection
     app.listen(process.env.PORT, function () {
