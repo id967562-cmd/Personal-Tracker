@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div class="dashboard">
+        <!-- Slidebar -->
+        <aside class="sidebar">
+            <h2>Personal Tracker</h2>
+            <nav>
+                <ul>
+                    <li>Dashboard</li>
+                    <li>My Tasks</li>
+                    <li>GitHub</li>
+                    <li>LinkedIn</li>
+                    <li>Notifications</li>
+                    <li>Settings</li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="content-area">
+            <!-- Main Section -->
+            <main class="main-content">
+                <h1>Welcome Back!</h1>
+                <p>Track your progress and stay productive.</p>
+                <section class="overview">
+
+                    <div class="card">
+                        <h3>Total Tasks</h3>
+                        <h2>10</h2>
+                    </div>
+
+                    <div class="card">
+                        <h3>Completed Tasks</h3>
+                        <h2>6</h2>
+                    </div>
+
+                    <div class="card">
+                        <h3>Pending Tasks</h3>
+                        <h2>4</h2>
+                    </div>
+
+                </section>
+                <section class="task-section">
+
+                    <div class="task-header">
+                        <h2>My Tasks</h2>
+                        <button id="add-task-btn">+ Add Task</button>
+                    </div>
+
+                    <div class="task-form">
+                        <input type="text" id="task-input" placeholder="Enter your task...">
+
+                        <button id="save-task-btn">Save Task</button>
+                    </div>
+
+                    <div id="task-list">
+                        <!-- Tasks will appear here dynamically -->
+                    </div>
+
+                </section>
+            </main>
+
+            
+        </div>
+    </div>
+    <footer class="footer">
+                <p>&copy; 2026 Personal Tracker. All rights reserved.</p>
+            </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
